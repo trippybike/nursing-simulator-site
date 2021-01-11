@@ -493,7 +493,7 @@ class IntroductionComponent {
         this.router = router;
     }
     ngOnInit() {
-        this.videoSource = "./../assets/videos/OL.mp4"; //disable for electron build
+        this.videoSource = "assets/videos/OL.mp4"; //disable for electron build
         this.beginPlaying = false;
         this.overlayHidden = false;
     }
@@ -1021,7 +1021,7 @@ class MainComponent {
         return this.getResponseService.invokeResponseSelection.subscribe((response) => {
             this.responsesSubscription.unsubscribe();
             this.responseOngoing = true;
-            this.videoSource = "./../assets/videos/".concat(response.src); //disable for electron build
+            this.videoSource = "assets/videos/".concat(response.src); //disable for electron build
             console.log(this.videoSource);
             this.vidReadySubscription = this.api
                 .getMediaById("singleVideo")
